@@ -1,0 +1,15 @@
+<%= render partial:'/shared/nav_page', locals: {title: 'New Spending', backurl: user_category_path(user_id:@user.id,id:@category.id)}  %>
+<div class="spending-form-container">
+  <%= form_with url:user_category_spendings_path(user_id:@user.id,category_id:@category.id), method: :post,
+  scope: :new_spending , local: true, class: "category-form" do |f| %>
+  <%= f.label :name, 'Spending'  %>
+  <%= f.text_field :name, required:true %>
+  <%= f.label :amount, 'Amount'  %>
+  <%= f.number_field :amount, step:0.10,min:0 , required:true  %>
+  <%= f.label :category_id, 'Select Categories'  %>
+  <%= f.select :category_ids, @categories.map {|item| [item.name,item.id]},
+  {include_hidden: false},{multiple: true, required: true, size: 5} %>
+  <%= f.submit 'Save' %>
+  <%= link_to "Cancel", user_category_path(user_id:@user.id,id:@category.id) %>
+  <% end %>
+</div>
