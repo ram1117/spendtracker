@@ -1,0 +1,13 @@
+<%= render partial:'/shared/nav_page', locals: {title: 'New Category', backurl: user_categories_path(user_id:@user.id)}  %>
+<div class="category-form-container">
+  <%= form_with url:user_categories_path(user_id:@user.id),method: :post,
+  scope: :new_category, local: true, class: "category-form" do |f| %>
+  <%= f.label :name, 'Category Name'  %>
+  <%= f.text_field :name, required:true %>
+  <%= f.label :icon, 'Icon'  %>
+  <%= f.text_field :icon, required:true %>
+  <%= f.submit 'Save' %>
+  <%= link_to "Cancel", user_categories_path(user_id:@user.id) %>
+  <% end %>  
+</div>
+

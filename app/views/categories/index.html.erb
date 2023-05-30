@@ -1,0 +1,19 @@
+<%= render '/shared/nav_main',title: 'categories'  %>
+<h2>Total Spendings:</h2>
+<div class="custom-container">
+  <div class="">
+    <% @categories.each do |category| %>
+      <div class="category-card">  
+        <%= link_to user_category_path(user_id:@user.id, id:category.id) do %>
+        <h3><%= category.name%></h3>
+        <p> Total Amount <%= category.total_amount %></>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to new_user_category_path(user_id:@user.id) do %>
+<button>
+  Add New Category
+</button>
+<% end %>
