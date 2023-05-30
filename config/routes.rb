@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'spendings/new'
+  get 'spendings/create'
   get 'categories/index'
   get 'categories/new'
   get 'categories/create'
@@ -9,6 +11,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'users#index'
   resources :users, only: [:index] do
-    resources :categories, only: %i[index new create show]
+    resources :categories, only: %i[index new create show] do
+      resources :spendings, only: %i[new create]
+    end
   end
 end
