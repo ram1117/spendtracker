@@ -11,21 +11,21 @@ User.destroy_all
 
 user = User.create(name: 'Ram')
 
-categories = Category.create(
+Category.create(
   [
     {
       name: 'groceries',
-      icon: 'some icon url',
+      icon: 'shopping_cart',
       user_id: user.id
     },
     {
       name: 'shopping',
-      icon: 'some icon url',
+      icon: 'shopping_bag',
       user_id: user.id
     },
     {
       name: 'Bills',
-      icon: 'some icon url',
+      icon: 'receipt_long',
       user_id: user.id
     }
   ]

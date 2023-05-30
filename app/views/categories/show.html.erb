@@ -1,10 +1,16 @@
 <%= render partial:'/shared/nav_page', locals: {title: 'New Category', backurl:
 user_categories_path(user_id:@user.id)} %>
-<h1>Category: <%= @category.name%></h1>
+<div class="custom-category-page-header">
+  <div class="custom-category-icon">
+    <i class="material-icons outlined md-48"><%= @category.icon%></i>
+  </div>
+  <h2>Category: <%= @category.name%></h2>
+</div>
+
 <div class="custom-container">
   <div class="">
     <% @spendings.each do |spending| %>
-    <div class="category-card">
+    <div class="spending-card">
       <h3>
         <%= spending.name %>
       </h3>
