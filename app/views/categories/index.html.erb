@@ -5,6 +5,9 @@
     <% @categories.each do |category| %>
       <div class="category-card">  
         <%= link_to user_category_path(user_id:@user.id, id:category.id) do %>
+        <div class="custom-category-icon">
+          <i class="material-icons outlined md-48"><%= category.icon%></i>
+        </div>
         <h3><%= category.name%></h3>
         <p> Total Amount <%= category.total_amount %></>
         <% end %>

@@ -1,0 +1,51 @@
+.popup-wrapper {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+  background-color: rgb(202, 202, 202);
+}
+
+.popup {
+  width: 90%;
+  margin: 5%;
+  padding: 10% 0;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.icons-container {
+  width: 100%;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.radio-grouping {
+  display: flex;
+  justify-content: center;
+}
+
+.popup-btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 576px) {
+  .icons-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
