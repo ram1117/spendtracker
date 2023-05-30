@@ -35,7 +35,7 @@
 
 # 📖 Spend Tracker <a name="about-project"></a>
 
-**Spend Tracker** is a Rails application that a user can use to keep track of their spendings. The app has features to signup and signin. User can add and view thier spendings. The spendings can be grouped into categories. The user can create and view spending groups and total spendings for each group. I have used Bootstrap for layout and responsive web design and Google Material Icons in the project.
+**Spend Tracker** is a Rails application that a user can use to keep track of their spendings. The app has features to signup and signin. User can add and view thier spendings. The spendings can be grouped into categories. The user can create and view spending groups and total spendings for each group. I have used Google Material Icons in the project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
