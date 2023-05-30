@@ -1,15 +1,16 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @categories = Category.all.includes(:spendings)
-    @user = User.first
+    @user = current_user
   end
 
   def new
-    @user = User.first
+    @user = current_user
   end
 
   def create
-    @user = User.first
+    @user = current_user
     category = Category.new(
       name: new_category_params['name'],
       icon: new_category_params['icon'],
@@ -24,7 +25,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @user = User.first
+    @user = current_user
     @category = Category.find(params[:id])
     @spendings = @category.spendings.order('created_at DESC')
   end

@@ -1,27 +1,33 @@
 <nav class="navbar">
   <div class="custom-nav-container">
+    <button
+      class="custom-nav-button"
+      type="button"
+      aria-label="Toggle navigation"
+    >
+      <i class="material-icons outlined">menu</i>
+    </button>
+      <h2 class="custom-navbar-header"><%= title %></h2>
+      <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, data: {turbo_method: :delete }  do %>
       <button
-        class="custom-nav-burger-button"
+        class="custom-nav-button"
         type="button"
-        aria-label="Toggle navigation"
+        aria-label="Logout button"
       >
-      <i class="material-icons outlined">menu</i> 
+        <i class="material-icons outlined">logout</i>
       </button>
-      <div class="custom-navbar-header">
-        <h2 class="page-title"><%= title %></h2>
-      </div>
-      <div class="custom-nav-items" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="custom-nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="custom-nav-item">
-            <a class="nav-link" href="#">Categories</a>
-          </li>
-          <li class="custom-nav-item">
-            <a class="nav-link">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <% end %>
+      <% else %>  
+      <%= link_to new_user_session_path  do %>
+      <button
+        class="custom-nav-button"
+        type="button"
+        aria-label="Login button"
+      >
+        <i class="material-icons outlined">login</i>
+      </button>
+      <% end %>
+      <% end %>
+  </div>
 </nav>

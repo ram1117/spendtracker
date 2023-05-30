@@ -1,12 +1,12 @@
 class SpendingsController < ApplicationController
   def new
-    @user = User.first
+    @user = current_user
     @categories = Category.all
     @category = Category.find(params[:category_id])
   end
 
   def create
-    @user = User.first
+    @user = current_user
 
     begin
       spending = Spending.create(
