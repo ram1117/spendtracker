@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+SpendItem.destroy_all
+Spending.destroy_all
 Category.destroy_all
 User.destroy_all
 
-user = User.create(name: 'Ram',email:'user1@test.com',password:'password')
+user = User.create(name: 'Ram', email: 'user1@test.com', password: 'password')
 
 Category.create(
   [
@@ -31,5 +33,22 @@ Category.create(
   ]
 )
 
+Spending.create([
+                  {
+                    name: 'weeky groceries',
+                    amount: 25.50,
+                    author_id: user.id
+                  }
+                ])
+
+SpendItem.create([
+                   {
+                     spending_id: Spending.first.id,
+                     category_id: Category.first.id
+                   }
+                 ])
+
 print "#{User.all.count} users added \n"
 print "#{Category.all.count} categories added \n"
+print "#{Spending.all.count} spendings added \n"
+print "#{SpendItem.all.count} spenditems added \n"
