@@ -1,4 +1,4 @@
-<%= render partial:'/shared/nav_page', locals: {title: 'New Category', backurl: user_categories_path(user_id:@user.id)}  %>
+<%= render partial:'/shared/nav_page', locals: {title: 'Add a Category', backurl: user_categories_path(user_id:@user.id)}  %>
 <div data-controller="categories">
   <div class="category-form-container">
     <%= form_with url:user_categories_path(user_id:@user.id),method: :post,

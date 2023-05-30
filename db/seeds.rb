@@ -9,7 +9,7 @@
 Category.destroy_all
 User.destroy_all
 
-user = User.create(name: 'Ram')
+user = User.create(name: 'Ram',email:'user1@test.com',password:'password')
 
 Category.create(
   [
@@ -30,3 +30,6 @@ Category.create(
     }
   ]
 )
+
+print "#{User.all.count} users added \n"
+print "#{Category.all.count} categories added \n"

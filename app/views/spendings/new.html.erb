@@ -1,4 +1,4 @@
-<%= render partial:'/shared/nav_page', locals: {title: 'New Spending', backurl: user_category_path(user_id:@user.id,id:@category.id)}  %>
+<%= render partial:'/shared/nav_page', locals: {title: 'Add a spending', backurl: user_category_path(user_id:@user.id,id:@category.id)}  %>
 <div class="spending-form-container">
   <%= form_with url:user_category_spendings_path(user_id:@user.id,category_id:@category.id), method: :post,
   scope: :new_spending , local: true, class: "category-form" do |f| %>
