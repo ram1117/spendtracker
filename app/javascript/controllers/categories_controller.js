@@ -71,6 +71,7 @@ const dismisspopup = () => {
 const icons = [
   { class: 'material-icons-outlined', name: 'payments' },
   { class: 'material-icons-outlined', name: 'shopping_cart' },
+  { class: 'material-icons-outlined', name: 'shopping_bag' },
   { class: 'material-icons-outlined', name: 'store' },
   { class: 'material-icons-outlined', name: 'credit_card' },
   { class: 'material-icons-outlined', name: 'medical_services' },
