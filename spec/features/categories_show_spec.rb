@@ -24,5 +24,4 @@ RSpec.describe 'Categories#Show', type: :system do
     sleep 1
     expect(current_path).to eql "/users/#{@user.id}/categories/#{@category.id}/spendings/new"
   end
-
 end

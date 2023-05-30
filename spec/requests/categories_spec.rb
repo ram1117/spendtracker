@@ -51,15 +51,15 @@ RSpec.describe 'Categories', type: :request do
 
   describe 'GET users/:user_id/categories/id' do
     it 'is valid response' do
-      get user_category_path(user_id: @user.id,id: @user.categories.first.id)
+      get user_category_path(user_id: @user.id, id: @user.categories.first.id)
       expect(response).to have_http_status(200)
     end
     it 'renders correct template' do
-      get user_category_path(user_id: @user.id,id: @user.categories.first.id)
+      get user_category_path(user_id: @user.id, id: @user.categories.first.id)
       expect(response).to render_template 'categories/show'
     end
     it 'contains placeholder text' do
-      get user_category_path(user_id: @user.id,id: @user.categories.first.id)
+      get user_category_path(user_id: @user.id, id: @user.categories.first.id)
       expect(response.body).to include('Category: groceries')
     end
   end
