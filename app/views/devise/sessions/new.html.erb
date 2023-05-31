@@ -1,28 +1,29 @@
-<%= render '/shared/nav_main', title: 'Sign in'  %>
-<div class="custom-registration">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="custom-login-field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<%= render partial:'/shared/nav_page', locals: {title: 'Sign In', backurl:
+users_path} %>
+  <section class="sign-section">
+    <div class="form-registration">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="custom-form-field">
+        <%= f.email_field :email, autofocus: true, class:'custom-form-field-text',
+         placeholder:'E-mail',autocomplete: "email" %>
+      </div>
 
-  <div class="custom-login-field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="custom-login-field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <div class="custom-form-field">
+        <%= f.password_field :password, autocomplete: "current-password", 
+        class:'custom-form-field-text',placeholder:'Password'  %>
+      </div>
+    
+      <% if devise_mapping.rememberable? %>
+        <div class="custom-form-field-checkbox">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+    
+      <div class="custom-login-actions bg-primary">
+        <%= f.submit "Log in", class:'blue-button bg-primary text-secondary' %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
     </div>
-  <% end %>
-
-  <div class="custom-login-actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-
-</div>
+  </section>

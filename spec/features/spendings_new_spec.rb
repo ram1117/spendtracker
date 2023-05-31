@@ -14,7 +14,7 @@ RSpec.describe 'Spendings#New', type: :system do
 
   it 'click back button reroutes to categories#show page' do
     visit new_user_category_spending_path(user_id: @user.id, category_id: @category.id)
-    first('button.custom-nav-button').click
+    find_link('nav-back-link').click
     sleep 1
     expect(current_path).to eql "/users/#{@user.id}/categories/#{@category.id}"
   end

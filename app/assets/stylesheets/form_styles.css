@@ -1,0 +1,82 @@
+.form-registration,
+.form-category {
+  margin: 10% auto;
+  width: 90%;
+}
+
+.custom-form-field-selection {
+  margin: 2rem 0;
+}
+
+.custom-form-field-text {
+  padding: 1rem 0;
+  font-size: 1rem;
+  border: none;
+  background: #f0f2f1;
+  border-bottom: solid 1px #909090;
+  width: 100%;
+  font-family: Montserrat, Times, serif;
+}
+
+.custom-form-field-multi-select {
+  padding: 1rem 0;
+  font-size: 1rem;
+  background: #f0f2f1;
+  border: solid 1px #909090;
+  width: 100%;
+  font-family: Montserrat, Times, serif;
+}
+
+.custom-form-field-checkbox > * {
+  margin: 1rem 0;
+  color: #909090;
+}
+
+.custom-login-actions {
+  margin: 2rem 0;
+}
+
+.custom-form-field-text-small {
+  padding: 1rem 0;
+  font-size: 1rem;
+  border: none;
+  background: #f0f2f1;
+  border-bottom: solid 1px #909090;
+  width: 70%;
+  font-family: Montserrat, Times, serif;
+}
+
+.custom-form-field-text:focus,
+.custom-form-field-text-small:focus {
+  outline: none;
+}
+
+.custom-form-field-icon-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-form-field-icon-box button {
+  width: 20%;
+}
+
+.custom-form-field-label {
+  font-size: 1rem;
+  margin: 2rem 0;
+  color: #909090;
+  font-family: Montserrat, Times, serif;
+}
+
+@media screen and (min-width: 576px) {
+  .form-registration,
+  .form-category {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .form-registration,
+  .form-category {
+    width: 40%;
+  }
+}

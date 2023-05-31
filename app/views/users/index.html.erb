@@ -1,10 +1,18 @@
-<%= render '/shared/nav_main',title: 'Home'  %>
 <section class="section-main-page">
-  <h1>Spendings Tracker</h1>
-  <button>
-    <%= link_to "Sign In", new_user_session_path %>
-  </button>
-  <button>
-    <%= link_to "Sign Up", new_user_registration_path %>
-  </button>
+  <%= render '/shared/nav_main',title: 'Home'  %>
+  <div class="main-page-container">
+    <h1 class="main-page-header text-primary">Spendings Tracker</h1>
+    <div class="main-page-btn-group">
+      <%= link_to new_user_session_path do %>
+      <button class="blue-button bg-primary text-secondary">
+        Sign In
+      </button>
+      <% end %>
+      <%= link_to new_user_registration_path do %>
+      <button class="blue-button bg-primary text-secondary">
+        Sign Up
+      </button>
+      <% end %>
+    </div>
+  </div>
 </section>

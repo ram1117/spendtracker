@@ -19,3 +19,66 @@
  *= require material_icons.twotone
  *= require material_icons.helpers
  */
+
+html {
+  background: #fff;
+  font-family: Montserrat, Times, serif;
+}
+
+.notice,
+.alert {
+  display: none;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+  background: #f0f2f1;
+}
+
+.app-font {
+  font-family: Montserrat, Times, serif;
+}
+
+.bg-primary {
+  background: #3778c2;
+}
+
+.bg-primary-light {
+  background: #fff;
+}
+
+.bg-secondary {
+  background: #5fb523;
+}
+
+.text-primary {
+  color: #434b54;
+}
+
+.text-primary-light {
+  color: #545c67;
+}
+
+.text-secondary {
+  color: #fff;
+}
+
+.text-form {
+  color: #545c67;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px #545c67;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    width: 70%;
+  }
+}

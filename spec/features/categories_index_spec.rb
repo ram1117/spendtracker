@@ -8,8 +8,8 @@ RSpec.describe 'Categories#index', type: :system do
 
   it 'has placeholder text content' do
     visit user_categories_path(user_id: @user.id)
-    expect(page).to have_content('categories')
-    expect(page).to have_content('Total Amount 25.5')
+    expect(page).to have_content('Spending Categories')
+    expect(page).to have_content('$ 25.5')
   end
 
   it 'clicking a category link redirects to category#show page' do

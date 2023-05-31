@@ -15,8 +15,8 @@ const createIconPopup = () => {
   const popup = document.createElement('div');
   popup.classList.add('popup');
   popup.id = 'popup-container';
-  const header = document.createElement('h3');
-  header.textContent = 'Select Icon';
+  const header = document.createElement('h2');
+  header.textContent = 'Select An Icon';
   popup.appendChild(header);
 
   const iconsContainer = document.createElement('div');
@@ -37,18 +37,23 @@ const createIconPopup = () => {
   popupBtnGroup.classList.add('popup-btn-group');
 
   const okbutton = document.createElement('button');
+  okbutton.classList.add('popup-btn','bg-primary', 'text-secondary')
   okbutton.setAttribute('type', 'button');
   okbutton.textContent = 'Select';
   okbutton.onclick = () => setTextField();
   const cancelbutton = document.createElement('button');
+  cancelbutton.classList.add('popup-btn','bg-primary', 'text-secondary')
   cancelbutton.setAttribute('type', 'button');
   cancelbutton.textContent = 'Cancel';
   cancelbutton.onclick = () => dismisspopup();
   popupBtnGroup.appendChild(okbutton);
   popupBtnGroup.appendChild(cancelbutton);
   popup.appendChild(popupBtnGroup);
+  const errMsg = document.createElement('h5');
+  errMsg.id='popup-err-msg';
+  errMsg.textContent=' '
+  popup.appendChild(errMsg)
   popupWrapper.appendChild(popup);
-
   document.body.appendChild(popupWrapper);
 };
 
@@ -57,10 +62,14 @@ const setTextField = () => {
   const selected_radio = document.querySelector(
     "input[type='radio'][name=icon]:checked"
   );
-  selected_radio === null
-    ? (txtfield.value = 'star')
-    : (txtfield.value = selected_radio.value);
-  dismisspopup();
+  if (selected_radio === null){
+    const erMsg = document.getElementById('popup-err-msg');
+    erMsg.textContent='Please select an Icon'
+  }
+  else{
+    txtfield.value = selected_radio.value;
+    dismisspopup();
+  }
 };
 
 const dismisspopup = () => {

@@ -1,17 +1,33 @@
-<%= render partial:'/shared/nav_page', locals: {title: 'Add a Category', backurl: user_categories_path(user_id:@user.id)}  %>
+<%= render partial:'/shared/nav_page', locals: {title: 'Add a Category',
+backurl: user_categories_path(user_id:@user.id)} %>
 <div data-controller="categories">
-  <div class="category-form-container">
+  <div class="form-category">
     <%= form_with url:user_categories_path(user_id:@user.id),method: :post,
     scope: :new_category, local: true, class: "category-form" do |f| %>
-    <%= f.label :name, 'Category Name'  %>
-    <%= f.text_field :name, required:true %>
-    <%= f.label :icon, 'Icon'  %>
-    <%= f.text_field :icon, readonly: true %>
-    <button id="icon-popup" type="button">Select Icon</button>
-    <%= f.submit 'Save' %>
-    <%= link_to "Cancel", user_categories_path(user_id:@user.id) %>
-    <% end %>  
+    <div class="custom-form-field">
+      <%= f.text_field :name, placeholder:'Category Name',
+      class:'custom-form-field-text-small',required:true %>
+    </div>
+
+    <div class="custom-form-field-icon-box">
+      <%= f.text_field :icon, readonly: true, placeholder:'Select Icon',
+      class:'custom-form-field-text-small' %>
+      <button 
+      id="icon-popup" 
+      class="bg-primary text-secondary"
+      type="button">
+      Select Icon
+    </button>
+    </div>
+
+    <div class="custom-login-actions bg-primary">
+      <%= f.submit 'Save', class:'blue-button bg-primary text-secondary' %>
+    </div>
+    <div class="custom-login-actions bg-primary">
+      <%= link_to user_categories_path(user_id:@user.id), id:'cancel-link' do %> 
+      <button class="blue-button bg-primary text-secondary" >Cancel</button>
+      <% end %>
+    </div>
+    <% end %>
   </div>
 </div>
-
-

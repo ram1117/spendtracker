@@ -8,12 +8,12 @@ RSpec.describe 'Categories#Show', type: :system do
 
   it 'has placeholder text content' do
     visit user_category_path(user_id: @user.id, id: @category.id)
-    expect(page).to have_content('Category: groceries')
+    expect(page).to have_content('Spendings')
   end
 
   it 'click back button reroutes to categories#idnex page' do
     visit user_category_path(user_id: @user.id, id: @category.id)
-    first('button.custom-nav-button').click
+    find_link('nav-back-link').click
     sleep 1
     expect(current_path).to eql "/users/#{@user.id}/categories"
   end
