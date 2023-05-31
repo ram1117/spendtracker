@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.custom-navbar-header {
+  font-weight: 400;
+}
+
 .custom-nav-container > button {
   border: none;
   cursor: pointer;

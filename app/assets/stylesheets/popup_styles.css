@@ -1,3 +1,9 @@
+#icon-popup {
+  border: none;
+  font-family: Montserrat, Times, serif;
+  cursor: pointer;
+}
+
 .popup-wrapper {
   position: fixed;
   z-index: 99;
@@ -57,6 +63,7 @@ input[type='radio'] {
   padding: 0.7rem;
   border: 1px solid #fff;
   font-size: 1rem;
+  font-family: Montserrat, Times, serif;
 }
 
 @media screen and (min-width: 576px) {
