@@ -27,7 +27,8 @@ html {
 
 .notice,
 .alert {
-  display: none;
+  text-align: center;
+  color: #3778c2;
 }
 
 body {
