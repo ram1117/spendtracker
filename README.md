@@ -73,6 +73,8 @@
 
 - [Live Demo Link](https://beta-spendtracker.onrender.com/)
 
+- [Loom Video Presentation](https://www.loom.com/share/4ef46f359fb94a0baebcab67170bf114)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
