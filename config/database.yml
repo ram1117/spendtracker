@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["SPENDTRACKER_DATABASE_URL"] %>
   database: <%= ENV["SPENDTRACKER_DATABASE_NAME"] %>
   username: <%= ENV["SPENDTRACKER_DATABASE_USERNAME"] %>
   password: <%= ENV["SPENDTRACKER_DATABASE_PASSWORD"] %>
