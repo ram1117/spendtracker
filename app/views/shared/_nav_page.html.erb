@@ -1,35 +1,38 @@
-<nav class="navbar">
+<nav class="navbar bg-primary text-secondary">
   <div class="custom-nav-container">
-    <%= link_to backurl do %>
+    
     <button
-      class="custom-nav-button"
+      class="nav-buttons bg-primary"
       type="button"
       aria-label="Back navigation navigation"
     >
+    <%= link_to backurl do %>
       <i class="material-icons two-tone">arrow_back</i>
-    </button>
     <% end %>
+    </button>
+    
     <h2 class="custom-navbar-header"><%= title %></h2>
     <% if user_signed_in? %>
-    <%= link_to destroy_user_session_path, data: {turbo_method: :delete } do %>
+    
     <button
-      class="custom-nav-button"
+      class="nav-buttons bg-primary"
       type="button"
       aria-label="Logout button"
     >
-      <i class="material-icons outlined">logout</i>
+      <%= link_to destroy_user_session_path, data: {turbo_method: :delete } do %>
+        <i class="material-icons outlined">logout</i>
+      <% end %>
     </button>
-    <% end %>
     <% else %>  
-      <%= link_to new_user_session_path  do %>
       <button
-        class="custom-nav-button"
+        class="nav-buttons bg-primary"
         type="button"
         aria-label="Login button"
       >
+      <%= link_to new_user_session_path  do %>
         <i class="material-icons outlined">login</i>
-      </button>
-      <% end %>
+        <% end %>
+      </button>    
     <% end %>
   </div>
 </nav>

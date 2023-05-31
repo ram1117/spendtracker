@@ -1,0 +1,44 @@
+.nav-buttons {
+  border: none;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.nav-buttons a{
+  color: #fff;
+}
+
+.bottom-btn-link{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-decoration: none;
+}
+
+.bottom-btns-wrapper {
+  width: 100%;
+  padding: 1vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-btns{
+  width: 95%;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #fff;
+  padding: 0.9rem;
+  cursor: pointer;
+}
+
+.spending-card{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  margin: 0.5rem 0;
+}
+
+.show-spendings-title,
+.show-spendings-amount{
+  font-weight: 400;
+}

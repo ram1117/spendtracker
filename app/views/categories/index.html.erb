@@ -1,21 +1,25 @@
-<%= render '/shared/nav_main',title: 'categories'  %>
 <div class="custom-container">
-  <div class="">
+  <%= render '/shared/nav_main',title: 'categories'  %>
+  <div class="custom-categories-container">
     <% @categories.each do |category| %>
-      <div class="category-card">  
-        <%= link_to user_category_path(user_id:@user.id, id:category.id) do %>
-        <div class="custom-category-icon">
-          <i class="material-icons outlined md-48"><%= category.icon%></i>
+    <%= link_to user_category_path(user_id:@user.id, id:category.id),
+        class:'custom-category-links' do %>
+        <div class="custom-category-card bg-primary-light text-primary">  
+          <div class="custom-category-card-wrapper">
+            <i class="material-icons outlined custom-material-icon"><%= category.icon%></i>
+            <h4 class="custom-category-card-title text-primary-light"><%= category.name%></h4>
+            <h4 class="custom-category-card-amount text-primary">$ <%= category.total_amount %></h4>
+          </div>
         </div>
-        <h3><%= category.name%></h3>
-        <p> Total Amount <%= category.total_amount %></>
-        <% end %>
-      </div>
+      <% end %>
     <% end %>
   </div>
+  <%= link_to new_user_category_path(user_id:@user.id),class: 'bottom-btn-link' do %>
+    <div class="bottom-btns-wrapper bg-secondary">
+      <button class="bottom-btns bg-secondary text-secondary">
+      Add New Category
+      </button>
+    </div>
+  <% end %>
 </div>
-<%= link_to new_user_category_path(user_id:@user.id) do %>
-<button>
-  Add New Category
-</button>
-<% end %>
+
