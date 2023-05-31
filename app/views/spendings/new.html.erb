@@ -1,15 +1,33 @@
 <%= render partial:'/shared/nav_page', locals: {title: 'Add a spending', backurl: user_category_path(user_id:@user.id,id:@category.id)}  %>
-<div class="spending-form-container">
+<div class="form-category">
   <%= form_with url:user_category_spendings_path(user_id:@user.id,category_id:@category.id), method: :post,
   scope: :new_spending , local: true, class: "category-form" do |f| %>
-  <%= f.label :name, 'Spending'  %>
-  <%= f.text_field :name, required:true %>
-  <%= f.label :amount, 'Amount'  %>
-  <%= f.number_field :amount, step:0.10,min:0 , required:true  %>
-  <%= f.label :category_id, 'Select Categories'  %>
-  <%= f.select :category_ids, @categories.map {|item| [item.name,item.id]},
-  {include_hidden: false},{multiple: true, required: true, size: 5} %>
-  <%= f.submit 'Save' %>
-  <%= link_to "Cancel", user_category_path(user_id:@user.id,id:@category.id) %>
+  <div class="custom-form-field">
+    <%= f.text_field :name, required:true,
+    placeholder:'Name',class:'custom-form-field-text' %>
+  </div>
+  
+  <div class="custom-form-field">
+  <%= f.number_field :amount, step:0.10,min:0 , required:true,
+    placeholder:'Amount', class:'custom-form-field-text' %>
+  </div>
+
+  <div class="custom-form-field-selection">
+    <%= f.label :category_id, 'Select Categories', class:'text-form' %> 
+    <%= f.select :category_ids, @categories.map {|item| [item.name,item.id]},
+    {include_hidden: false},
+    {multiple: true, required: true, size: 5,class:'custom-form-field-multi-select'} %>
+  </div>
+
+  <div class="custom-login-actions bg-primary">
+    <%= f.submit 'Save',class:'blue-button bg-primary text-secondary' %>
+  </div>
+  
+  <div class="custom-login-actions bg-primary">
+    <%= link_to user_category_path(user_id:@user.id,id:@category.id), id:'cancel-link' do %>
+    <button class="blue-button bg-primary text-secondary" >Cancel</button>
+    <% end %>
+  </div>
+  
   <% end %>
 </div>

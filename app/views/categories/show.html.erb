@@ -11,12 +11,12 @@
   <div class="custom-spendings-container">
     <% @spendings.each do |spending| %>
     <div class="spending-card bg-primary-light">
-      <h2 class="show-spendings-title text-primary-light">
+      <h4 class="show-spendings-title text-primary-light">
         <%= spending.name %>
-      </h2>
-      <h2 class="show-spendings-amount text-primary"> Amount: $ 
+      </h4>
+      <h4 class="show-spendings-amount text-primary"> Amount: $ 
         <%= spending.amount %>
-      </h2>
+      </h4>
     </div>
     <% end %>
   </div>

@@ -1,46 +1,56 @@
 .form-registration,
-.form-category
- {
+.form-category {
   margin: 10% auto;
   width: 90%;
 }
 
-.custom-form-field-text{
-padding: 1rem 0;
-font-size: 1rem;
-border: none;
-background: #f0f2f1;  
-border-bottom: solid 1px #909090;
-width: 100%;
+.custom-form-field-selection{
+  margin: 2rem 0;
 }
 
-.custom-form-field-checkbox > *{
-margin: 1rem 0;
-color: #909090;
+.custom-form-field-text {
+  padding: 1rem 0;
+  font-size: 1rem;
+  border: none;
+  background: #f0f2f1;
+  border-bottom: solid 1px #909090;
+  width: 100%;
 }
 
-.custom-login-actions{
+.custom-form-field-multi-select {
+  padding: 1rem 0;
+  font-size: 1rem;
+  background: #f0f2f1;
+  border: solid 1px #909090;
+  width: 100%;
+}
+
+.custom-form-field-checkbox > * {
+  margin: 1rem 0;
+  color: #909090;
+}
+
+.custom-login-actions {
   margin: 2rem 0;
   padding: 0.3rem;
   border: 1px solid #fff;
 }
 
-.custom-form-field-text-small{
+.custom-form-field-text-small {
   padding: 1rem 0;
   font-size: 1rem;
   border: none;
-  background: #f0f2f1;  
+  background: #f0f2f1;
   border-bottom: solid 1px #909090;
   width: 70%;
 }
 
 .custom-form-field-text:focus,
-.custom-form-field-text-small:focus
-{
+.custom-form-field-text-small:focus {
   outline: none;
 }
 
-.custom-form-field-icon-box{
+.custom-form-field-icon-box {
   display: flex;
   justify-content: space-between;
 }
@@ -49,14 +59,22 @@ color: #909090;
   width: 20%;
 }
 
+.custom-form-field-label{
+  font-size: 1rem;
+  margin: 2rem 0;
+  color: #909090;
+}
+
 @media screen and (min-width: 576px) {
-  .custom-registration {
+  .form-registration,
+  .form-category {
     width: 50%;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .custom-registration {
+  .form-registration,
+  .form-category{
     width: 40%;
   }
 }
