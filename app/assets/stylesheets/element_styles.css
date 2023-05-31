@@ -4,11 +4,11 @@
   padding: 0 1rem;
 }
 
-.nav-buttons a{
+.nav-buttons a {
   color: #fff;
 }
 
-.bottom-btn-link{
+.bottom-btn-link {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -22,7 +22,7 @@
   justify-content: center;
 }
 
-.bottom-btns{
+.bottom-btns {
   width: 95%;
   font-size: 1rem;
   font-weight: 400;
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.spending-card{
+.spending-card {
   display: flex;
   justify-content: space-between;
   padding: 1rem 3rem;
@@ -39,6 +39,43 @@
 }
 
 .show-spendings-title,
-.show-spendings-amount{
+.show-spendings-amount {
   font-weight: 400;
+}
+
+.section-main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-page-container {
+  margin: 5rem 0;
+  width: 70%;
+}
+
+.main-page-header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main-page-btn-group {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-page-btn-group a {
+  width: 100%;
+  padding: 0.2rem;
+  margin: 1rem 0;
+}
+
+.blue-button{
+  cursor: pointer;
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #fff;
+  font-size: 1rem;
 }

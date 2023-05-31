@@ -59,13 +59,16 @@ body{
   color: #fff;
 }
 
+.text-form{
+  color: #909090
+}
+
  @media screen and (min-width: 768px) {
   body{
     width: 80%;
     margin: 0 auto;
     border: solid 1px #545c67;
   }
-  
 }
 @media screen and (min-width: 1200px) {
   body{
