@@ -20,38 +20,39 @@
  *= require material_icons.helpers
  */
 
-html{
+html {
   background: #fff;
 }
 
-.notice,.alert{
+.notice,
+.alert {
   display: none;
 }
 
-body{
+body {
   margin: 0;
   height: 100vh;
   position: relative;
   background: #f0f2f1;
 }
 
- .bg-primary{
+.bg-primary {
   background: #3778c2;
 }
 
-.bg-primary-light{
+.bg-primary-light {
   background: #fff;
 }
 
-.bg-secondary{
+.bg-secondary {
   background: #5fb523;
 }
 
-.text-primary{
-  color:#434b54
+.text-primary {
+  color: #434b54;
 }
 
-.text-primary-light{
+.text-primary-light {
   color: #545c67;
 }
 
@@ -59,19 +60,20 @@ body{
   color: #fff;
 }
 
-.text-form{
+.text-form {
   color: #545c67;
 }
 
- @media screen and (min-width: 768px) {
-  body{
+@media screen and (min-width: 768px) {
+  body {
     width: 80%;
     margin: 0 auto;
     border: solid 1px #545c67;
   }
 }
+
 @media screen and (min-width: 1200px) {
-  body{
+  body {
     width: 70%;
   }
 }

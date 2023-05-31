@@ -4,7 +4,7 @@
   width: 90%;
 }
 
-.custom-form-field-selection{
+.custom-form-field-selection {
   margin: 2rem 0;
 }
 
@@ -32,8 +32,6 @@
 
 .custom-login-actions {
   margin: 2rem 0;
-  padding: 0.3rem;
-  border: 1px solid #fff;
 }
 
 .custom-form-field-text-small {
@@ -59,7 +57,7 @@
   width: 20%;
 }
 
-.custom-form-field-label{
+.custom-form-field-label {
   font-size: 1rem;
   margin: 2rem 0;
   color: #909090;
@@ -74,7 +72,7 @@
 
 @media screen and (min-width: 992px) {
   .form-registration,
-  .form-category{
+  .form-category {
     width: 40%;
   }
 }

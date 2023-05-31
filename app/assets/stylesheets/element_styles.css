@@ -66,13 +66,14 @@
   flex-direction: column;
   align-items: center;
 }
+
 .main-page-btn-group a {
   width: 100%;
   padding: 0.2rem;
   margin: 1rem 0;
 }
 
-.blue-button{
+.blue-button {
   cursor: pointer;
   width: 100%;
   padding: 0.7rem;
