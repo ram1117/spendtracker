@@ -13,7 +13,7 @@ RSpec.describe 'Categories#New', type: :system do
 
   it 'click back button reroutes to categories#index page' do
     visit new_user_category_path(user_id: @user.id)
-    first('button.custom-nav-button').click
+    find_link('nav-back-link').click
     sleep 1
     expect(current_path).to eql "/users/#{@user.id}/categories"
   end

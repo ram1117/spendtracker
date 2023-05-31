@@ -60,7 +60,7 @@ RSpec.describe 'Categories', type: :request do
     end
     it 'contains placeholder text' do
       get user_category_path(user_id: @user.id, id: @user.categories.first.id)
-      expect(response.body).to include('Category: groceries')
+      expect(response.body).to include('Spendings')
     end
   end
 end

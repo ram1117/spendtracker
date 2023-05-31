@@ -1,5 +1,5 @@
 <div class="custom-container">
-  <%= render '/shared/nav_main',title: 'categories'  %>
+  <%= render '/shared/nav_main',title: 'Spending Categories'  %>
   <div class="custom-categories-container">
     <% @categories.each do |category| %>
     <%= link_to user_category_path(user_id:@user.id, id:category.id),
