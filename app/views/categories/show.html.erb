@@ -1,0 +1,32 @@
+<section class="custom-container">
+  <%= render partial:'/shared/nav_page', locals: {title: 'Spendings', backurl:
+  user_categories_path(user_id:@user.id)} %>
+  <div class="custom-category-card-show bg-primary-light text-primary">  
+    <div class="custom-category-card-wrapper">
+      <i class="material-icons outlined custom-material-icon"><%= @category.icon%></i>
+      <h4 class="custom-category-card-title text-primary-light"><%= @category.name%></h4>
+      <h4 class="custom-category-card-amount text-primary">$ <%= @category.total_amount %></h4>
+    </div>
+  </div>
+  <div class="custom-spendings-container">
+    <% @spendings.each do |spending| %>
+    <div class="spending-card bg-primary-light">
+      <h4 class="show-spendings-title text-primary-light">
+        <%= spending.name %>
+      </h4>
+      <h4 class="show-spendings-amount text-primary"> Amount: $ 
+        <%= spending.amount %>
+      </h4>
+    </div>
+    <% end %>
+  </div>
+  <%= link_to new_user_category_spending_path(user_id:@user.id,category_id:@category.id),
+  class: 'bottom-btn-link' do %>
+  <div class="bottom-btns-wrapper bg-secondary">
+    <button class="bottom-btns bg-secondary text-secondary app-font">
+      Add New Spending
+    </button>
+  </div>
+  <% end %>
+</section>
+

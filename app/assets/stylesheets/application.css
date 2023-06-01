@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require material_icons
+ *= require material_icons.outlined
+ *= require material_icons.sharp
+ *= require material_icons.round
+ *= require material_icons.twotone
+ *= require material_icons.helpers
+ */
+
+html {
+  background: #fff;
+  font-family: Montserrat, Times, serif;
+}
+
+.notice,
+.alert {
+  text-align: center;
+  color: #3778c2;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+  background: #f0f2f1;
+}
+
+.app-font {
+  font-family: Montserrat, Times, serif;
+}
+
+.bg-primary {
+  background: #3778c2;
+}
+
+.bg-primary-light {
+  background: #fff;
+}
+
+.bg-secondary {
+  background: #5fb523;
+}
+
+.text-primary {
+  color: #434b54;
+}
+
+.text-primary-light {
+  color: #545c67;
+}
+
+.text-secondary {
+  color: #fff;
+}
+
+.text-form {
+  color: #545c67;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px #545c67;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    width: 70%;
+  }
+}
