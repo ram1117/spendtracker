@@ -1,7 +1,7 @@
 class SpendingsController < ApplicationController
   def new
     @user = current_user
-    @categories = Category.all
+    @categories = Category.where(user_id: @user.id)
     @category = Category.find(params[:category_id])
   end
 

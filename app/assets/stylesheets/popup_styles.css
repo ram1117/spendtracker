@@ -71,4 +71,9 @@ input[type='radio'] {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
   }
+
+  .popup {
+    width: 50%;
+    margin: 5% auto;
+  }
 }

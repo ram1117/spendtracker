@@ -46,8 +46,8 @@ const createIconPopup = () => {
   cancelbutton.setAttribute('type', 'button');
   cancelbutton.textContent = 'Cancel';
   cancelbutton.onclick = () => dismisspopup();
-  popupBtnGroup.appendChild(okbutton);
   popupBtnGroup.appendChild(cancelbutton);
+  popupBtnGroup.appendChild(okbutton);
   popup.appendChild(popupBtnGroup);
   const errMsg = document.createElement('h5');
   errMsg.id='popup-err-msg';
